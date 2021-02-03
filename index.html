@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body onload="carregarPokemons(1)">
     <header>
         <nav id="mySidebar">
             <!-- <img src="./images/logo.webp" alt="logo" /> -->
@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="search.html">
                         Procurar Pokemons
                     </a>
                 </li>
@@ -39,51 +39,13 @@
     </header>
 
     <main id="main">
+        <img src="./images/logo.webp" class="logo" alt="logo" />
+
 
         <div class="pokemon-list" id="pokeList">
-            <!-- <button id="myBtn" onclick="openModal()">open</button> -->
-
-            <!-- <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div>
-
-            <div class="pokemon">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
-                <p>Bulbasaur</p>
-            </div> -->
 
         </div>
+
         <div id="myModal" class="modal">
 
             <!-- Modal content -->

@@ -74,7 +74,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 150px;
+    margin-top: 50px;
+}
+
+.logo {
+    margin-bottom: 100px;
 }
 
 
@@ -153,6 +157,22 @@ main .pokemon-list {
 
 .ghost {
     background-color: rgb(112, 88, 152);
+}
+
+.steel {
+    background-color: #7a7aa7;
+}
+
+.dark {
+    background-color: #303030;
+}
+
+.ice {
+    background-color: #45b6b6;
+}
+
+.dragon {
+    background-color: #3d07c0;
 }
 
 .pokemon img {

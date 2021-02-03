@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="./css/index.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/index.js"></script>
 </head>
-<body>
+<body onload="carregarMeusPokemons()">
     <header>
         <nav id="mySidebar">
             <ul>
@@ -24,7 +25,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="search.html">
                         Procurar Pokemons
                     </a>
                 </li>
@@ -33,12 +34,14 @@
     </header>
 
     <main id="main">
-        <div class="logo">
+        <img src="./images/logo.webp" class="logo" alt="logo" />
+
+
+        <div class="pokemon-list" id="meusPokes">
+
         </div>
-        <div class="dashboard">
-            
-        </div>
-        <!-- <button onclick="abrirMenu()">Teste</button> -->
+
+        <button onclick="addPokemon()">teste</button>
     </main>
 </body>
 </html>
