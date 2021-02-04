@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/search.js"></script>
 
 </head>
 
@@ -41,7 +41,14 @@
     <main id="main">
         <img src="./images/logo.webp" class="logo" alt="logo" />
 
+        <div class="input-container">
+            <input type="text" id="input" />
+            <button onclick="procurarPokemon()">Procurar</button>
+        </div>
 
+        <div class="pokemon-list" id="pokeList">
+
+        </div>
 
     </main>
 

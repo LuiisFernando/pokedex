@@ -4,22 +4,22 @@ $(document).ready(function () {
 });
 
 $(window).scroll(function () {
-    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-        
-      let page = Number(localStorage.getItem('page'));
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 
-      if (page) {
-          page += 1;
-          carregarPokemons(page)
-      }
+        let page = Number(localStorage.getItem('page'));
+
+        if (page) {
+            page += 1;
+            carregarPokemons(page)
+        }
     }
 });
 
 async function carregarPokemons(page) {
-    
-    const offset = page > 1 ? page * 100 : 0;
 
-    const pokemons = await getData(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=${offset}`);
+    const offset = page > 1 ? page * 10 : 0;
+
+    const pokemons = await getData(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`);
 
     const arrPromisse = pokemons.results.map(poke => {
         return getData(poke.url)
@@ -97,6 +97,44 @@ function getData(ajaxurl) {
         url: ajaxurl,
         type: 'GET',
     });
+}
+
+async function procurarPokemon() {
+    const nomePokemon = document.getElementById('input');
+
+    if (nomePokemon && nomePokemon.value) {
+        console.log('nome setado >>> ', nomePokemon.value);
+
+        const pokemon = await getData(`https://pokeapi.co/api/v2/pokemon/${nomePokemon.value}`);
+
+        if (pokemon) {
+
+            const list = document.getElementById('pokeList');
+
+
+            var div = document.createElement('div');
+
+            div.setAttribute('class', `pokemon ${pokemon.types[0].type.name}`);
+
+
+            var imagem = document.createElement('img');
+            var nome = document.createElement('p');
+
+            nome.innerHTML = pokemon.name;
+
+            imagem.setAttribute('src', pokemon.sprites.other['official-artwork'].front_default);
+
+            div.appendChild(imagem);
+            div.appendChild(nome);
+
+            list.appendChild(div);
+        }
+
+
+        console.log('POKEMON ENCONTRADO >>> ', pokemon);
+
+    }
+
 }
 
 
