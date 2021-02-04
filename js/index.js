@@ -4,15 +4,27 @@ $(document).ready(function () {
 });
 
 $(window).scroll(function () {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 
-        let page = Number(localStorage.getItem('page'));
+    var scrollHeight = $(document).height();
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    
+    console.log(scrollHeight);
+    console.log(scrollPosition);
+
+	if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+	    let page = Number(localStorage.getItem('page'));
 
         if (page) {
             page += 1;
             carregarPokemons(page)
         }
-    }
+	}
+
+
+    // if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+
+        
+    // }
 });
 
 async function carregarPokemons(page) {
