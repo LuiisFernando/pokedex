@@ -231,31 +231,61 @@ main .pokemon-list {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
+}
     
     /* Modal Content */
-    .modal-content {
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    }
+    max-width: 800px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.image-container img {
+    height: 300px;
+}
+
+.image-container {
+    width: 50%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container {
+    width: 50%;
+    /* background-color: yellow; */
+}
+
+.info-container p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 34px;
+}
     
     /* The Close Button */
-    .close {
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    }
+}
     
-    .close:hover,
-    .close:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    }
+}
 
 
 
